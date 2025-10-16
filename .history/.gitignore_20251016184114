@@ -1,0 +1,40 @@
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Node/JS
+node_modules/
+dist/
+build/
+.cache/
+.next/
+.out/
+
+# Data & models
+data/
+datasets/
+faces/
+results/
+checkpoints/
+**/models/
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Logs
+logs/
+*.log
+
+# Misc
+coverage/
+**/faces/
