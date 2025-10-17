@@ -19,7 +19,7 @@ Ever get really, really confused watching movies? It's not that you can't follow
 │  ├─ client/                         # React + Vite client
 │  │  ├─ public/
 │  │  ├─ src/
-│  │  ├─ .env                         # client config (ignored in VCS if listed)
+│  │  ├─ .env                         # client config
 │  │  ├─ package.json
 │  │  └─ vite.config.js
 │  │
@@ -47,7 +47,7 @@ Ever get really, really confused watching movies? It's not that you can't follow
 ├─ Prosopagknows.py                   # original script (reference)
 ├─ Deprecated_README.md
 ├─ README.md
-└─ requirements.txt                   # ML service deps (if not per-subdir)
+└─ requirements.txt                   # ML service deps
 ```
 
 ## How it Works:
