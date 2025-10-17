@@ -3,6 +3,52 @@
 ### The Premise:
 Ever get really, really confused watching movies? It's not that you can't follow the plot, it's just... there's so many faces! I myself (a proud prosopagnosiac) have a condition that prevents me from recognizing faces, even those of my friends and family. I have plenty of strategies to navigate this, but as an avid movie enjoyer, I found I needed a little extra help to tell apart all the characters. 
 
+## App Structure
+
+### Tech Stack
+- **Client:** React + Vite (client/)
+- **Server (API Gateway):** Node.js (server/)
+- **ML Service:** Python + FastAPI/Uvicorn (ml_service/)
+- **Languages:** JavaScript, Python
+- **Env files:** `client/.env`, `server/.env` 
+
+### Main Directory Structure (within `movie-face-id`)
+.
+├─ movie-face-id/                     # Web app monorepo-style folder
+│  ├─ client/                         # React + Vite client
+│  │  ├─ public/
+│  │  ├─ src/
+│  │  ├─ .env                         # client config (ignored in VCS if listed)
+│  │  ├─ package.json
+│  │  └─ vite.config.js
+│  │
+│  ├─ ml_service/                     # FastAPI ML service
+│  │  ├─ app.py
+│  │  ├─ faces/                       # training image cache *(ignored)*
+│  │  └─ models/                      # model weights/cache *(ignored)*
+│  │
+│  └─ server/                         # Node/Express API gateway
+│     ├─ index.js
+│     ├─ uploads/                     # temp uploaded images *(ignored)*
+│     └─ package.json
+│
+├─ readme_images/                     # screenshots used in README
+│  ├─ cast.png
+│  ├─ search.png
+│  ├─ search_results.png
+│  ├─ dune1.png
+│  ├─ dune2.png
+│  ├─ lotr_cast.png
+│  ├─ council_of_elrond.png
+│  └─ SinnersPoster.png
+│
+├─ prosopagknows.ipynb                # original notebook (reference)
+├─ Prosopagknows.py                   # original script (reference)
+├─ Deprecated_README.md
+├─ README.md
+└─ requirements.txt                   # ML service deps (if not per-subdir)
+
+
 ## How it Works:
 ![Image](./readme_images/search.png)
 
@@ -18,7 +64,7 @@ An analysis has been run to determine which characters were important enough / r
 There is very little reason to train on every orc in Lord of the Rings. You may do this, if this is what you wish to do, but it will take forever and produce bad results. The image scraping is dependent upon relevant search results, which may not always be available for each individual Uruk-hai.
 
 
-Depending on the number of images you've chosen to train on and the amount of characters in your movie, this can take a little while. For me, on an Intel Mac, it tends to take less than 15 minutes. I recommend running this BEFORE you start watching, so that if you ever get stuck on a face, you can immediately get results!
+Depending on the number of images you've chosen to train on and the amount of characters in your movie, this can take a little while. For me, on an Intel Mac, it tends to take around 15 minutes. I recommend running this BEFORE you start watching, so that if you ever get stuck on a face, you can immediately get results!
 
 ### Image Scraping & Training
 Just hit run, but make sure to let the image scraping finish before starting training!
@@ -77,7 +123,7 @@ The Python notebook this is built off (Prosopagknows v2) is still accessible wit
 
 [Prosopagknows 2nd Iteration](prosopagknows.ipynb)
 
-This is a project I started in high school with my partner Isaac Marovitz at Choate Rosemary Hall. In this original iteration, we downloaded enormous IMDB CSVs, didn't understand virtual environments, and our model identified characters in *Harry Potter* as Ron Weasley about 40% of the time. Since then, the technology has improved, and so have we. I miss you Isaac :)
+This is a project I started in high school with my partner Isaac at Choate Rosemary Hall. In this original iteration, we downloaded enormous IMDB CSVs, didn't understand virtual environments, and our model identified characters in *Harry Potter* as Ron Weasley about 40% of the time. Since then, the technology has improved, and so have we. I miss you Isaac :)
 
 #### On API Keys:
 I might have published my API Keys which **I KNOW** is absolutely terrible. However, this is a very small project and the worst that can happen is that my credits for image scraping / tmdb are timed out for the month. I've decided this is something I can live with.
