@@ -18,7 +18,7 @@ An analysis has been run to determine which characters were important enough / r
 There is very little reason to train on every orc in Lord of the Rings. You may do this, if this is what you wish to do, but it will take forever and produce bad results. The image scraping is dependent upon relevant search results, which may not always be available for each individual Uruk-hai.
 
 
-Depending on the number of images you've chosen to train on and the amount of characters in your movie, this can take a little while. For me, on an Intel Mac, it tends to take around 15 minutes. I recommend running this BEFORE you start watching, so that if you ever get stuck on a face, you can immediately get results!
+Depending on the number of images you've chosen to train on and the amount of characters in your movie, this can take a little while. For me, on an Intel Mac, it tends to take less than 15 minutes. I recommend running this BEFORE you start watching, so that if you ever get stuck on a face, you can immediately get results!
 
 ### Image Scraping & Training
 Just hit run, but make sure to let the image scraping finish before starting training!
@@ -77,7 +77,7 @@ The Python notebook this is built off (Prosopagknows v2) is still accessible wit
 
 [Prosopagknows 2nd Iteration](prosopagknows.ipynb)
 
-This is a project I started in high school with my partner Isaac at Choate Rosemary Hall. In this original iteration, we downloaded enormous IMDB CSVs, didn't understand virtual environments, and our model identified characters in *Harry Potter* as Ron Weasley about 40% of the time. Since then, the technology has improved, and so have we. I miss you Isaac :)
+This is a project I started in high school with my partner Isaac Marovitz at Choate Rosemary Hall. In this original iteration, we downloaded enormous IMDB CSVs, didn't understand virtual environments, and our model identified characters in *Harry Potter* as Ron Weasley about 40% of the time. Since then, the technology has improved, and so have we. I miss you Isaac :)
 
 #### On API Keys:
 I might have published my API Keys which **I KNOW** is absolutely terrible. However, this is a very small project and the worst that can happen is that my credits for image scraping / tmdb are timed out for the month. I've decided this is something I can live with.
