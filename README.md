@@ -13,6 +13,7 @@ Ever get really, really confused watching movies? It's not that you can't follow
 - **Env files:** `client/.env`, `server/.env` 
 
 ### Main Directory Structure (within `movie-face-id`)
+```
 .
 ├─ movie-face-id/                     # Web app monorepo-style folder
 │  ├─ client/                         # React + Vite client
@@ -47,7 +48,7 @@ Ever get really, really confused watching movies? It's not that you can't follow
 ├─ Deprecated_README.md
 ├─ README.md
 └─ requirements.txt                   # ML service deps (if not per-subdir)
-
+```
 
 ## How it Works:
 ![Image](./readme_images/search.png)
